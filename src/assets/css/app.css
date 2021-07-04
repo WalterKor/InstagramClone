@@ -74,3 +74,14 @@ body {
     border-right: 1px solid #eee;
     border-left: 1px solid #eee;
   }
+  .moreFeed{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .moreFeed button{
+    background: #eee;
+    color: red;
+    border-radius: 5px;
+    
+  }
