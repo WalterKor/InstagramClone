@@ -12,7 +12,7 @@
       <img src="./assets/logo.png" class="logo" />
     </div>
 
-    <Container />
+    <Container :feedData="feedData" />
 
     <div class="footer">
       <ul class="footer-button-plus">
@@ -25,10 +25,17 @@
 
 <script>
 import Container from './components/Container.vue';
+import feedDatd from './assets/js/feedData.js';
+
 
 
 export default {
   name: "App",
+  data() {
+    return {
+      feedData : feedDatd,
+    }
+  },
   components: {
     Container
   },

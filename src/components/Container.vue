@@ -1,8 +1,6 @@
 <template>
-     <div>
-        <Post/>
-        <Post/>
-        <Post/>
+     <div v-for="(a,i) in feedData" :key="a">
+        <Post :feedData="feedData[i]"/>
     </div>
 </template>
 
@@ -19,6 +17,11 @@ export default {
 
     components: {
         Post : Post
+    }
+    ,
+    props : {
+        //feedData : Array 이름 : 종류
+        feedData : Array,
     }
 
 }
