@@ -26,6 +26,17 @@
       </ul>
     </div>
   </div>
+
+  <div v-if="step == 0">내용0</div>
+  <div v-if="step == 1">내용1</div>
+  <div v-if="step == 2">내용2</div>
+  
+  
+  <button @click="step = 0">버튼0</button>
+  <button @click="step = 1">버튼1</button>
+  <button @click="step = 2">버튼2</button>
+  
+
 </template>
 
 <script>
@@ -39,6 +50,8 @@ export default {
   name: "App",
   data() {
     return {
+      step : 1,
+      feed1 : false,
       feedData : feedData,
       morePointer : 0,
     }
@@ -47,6 +60,7 @@ export default {
     Container
   },
   methods : {
+
     more(){
 
       // axios.post('https://codingapple1.github.io/vue/more0.json')
