@@ -11,13 +11,14 @@
     </div>
 
     <Container :feedData="feedData" :step="step" />
+
     <div class="moreFeed">
       <button @click="more">더보기</button>
     </div>
 
     <div class="footer">
       <ul class="footer-button-plus">
-        <input type="file" id="file" class="inputfile" />
+        <input @click="upload" id="file" class="inputfile" />
         <label for="file" class="input-plus">+</label>
       </ul>
     </div>
@@ -52,6 +53,10 @@ export default {
     Container,
   },
   methods: {
+    upload(e) {
+      let 파일 = e.target.files;
+      console.log(파일);
+    },
     more() {
       // axios.post('https://codingapple1.github.io/vue/more0.json')
       // .then()

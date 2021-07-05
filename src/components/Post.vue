@@ -26,6 +26,7 @@
 export default {
   props: {
     feedData: Object,
+    step: Number,
   },
 };
 </script>

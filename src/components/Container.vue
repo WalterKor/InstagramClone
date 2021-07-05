@@ -3,22 +3,29 @@
   <!-- <Post :feedData="feedData[i]"/> -->
   <!-- </div> -->
   <!-- 저번시간에 만든거 -->
-  <Post :게시물="게시물[i]" v-for="(a, i) in 게시물" :key="i" />
 
-  <!-- 필터선택페이지 -->
-  <div class="upload-image"></div>
-  <div class="filters">
-    <div class="filter-1"></div>
-    <div class="filter-1"></div>
-    <div class="filter-1"></div>
-    <div class="filter-1"></div>
-    <div class="filter-1"></div>
+  <div v-if="step == 0">
+    <Post :feedData="feedData[i]" v-for="(a, i) in feedData" :key="i" />
   </div>
 
-  <!-- 글작성페이지 -->
-  <div class="upload-image"></div>
-  <div class="write">
-    <textarea class="write-box">write!</textarea>
+  <!-- 필터선택페이지 -->
+  <div v-if="step == 1">
+    <div class="upload-image"></div>
+    <div class="filters">
+      <div class="filter-1"></div>
+      <div class="filter-1"></div>
+      <div class="filter-1"></div>
+      <div class="filter-1"></div>
+      <div class="filter-1"></div>
+    </div>
+  </div>
+
+  <div v-if="step == 2">
+    <!-- 글작성페이지 -->
+    <div class="upload-image"></div>
+    <div class="write">
+      <textarea class="write-box">write!</textarea>
+    </div>
   </div>
 </template>
 
@@ -27,9 +34,7 @@ import Post from "./Post.vue";
 
 export default {
   data() {
-    return {
-      step: 0,
-    };
+    return {};
   },
 
   components: {
