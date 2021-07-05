@@ -4,15 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
 
+    <title>Document</title>
+    <!-- ress.css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
     <style>
+      #home{
+        background-image: url(../assets/images/main-bg.jpg);
+        min-height: 100vh; /*화면을 꽉채운다 위에*/
+      }
+      .big-bg{
+        background-size: cover; /*다 나오게하는거?*/
+        background-position: center top;
+        background-repeat: no-repeat; /*화면이 너무 커져서 반복되는걸 방지*/
+      }
+      .wrapper{
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 0 4%;
+      }
+      h2{
+        font-family: 'Philosopher', sans-serif;
+      }
+      a{ text-decoration: none; }
+      img{ max-width: 100%;}
       *{
         margin: 0;
       }
-      body{
-        width: 1100px;
-        margin: 0 auto;
-      }
+      /*중앙정렬 치트키*/
+      /* body{ width: 1100px; margin: 0 auto;} */
       .home-content {
         text-align: center;
         margin-top: 10%;
@@ -61,34 +86,36 @@
           color: #0bc;
       }
     </style>
-
-    <title>Document</title>
+    
+    
   </head>
-  <body>
-    <header class="page-header">
-      <h1>
-        <a href="index.html"
-          ><img src="../assets/images/logo.svg" alt="WCB 카페 홈" class="logo"
-        /></a>
-      </h1>
-
-      <nav>
-        <ul class="main-nav">
-          <li><a href="news.html">News</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        .
-      </nav>
-    </header>
-
-    <div class="home-content wrapper">
-      <h2 class="page-title">We'll Make Your Day</h2>
-      <p>
-        멋진 카페에서 힐링시간을 가지세요. 첨가물을 넣지 않은 재료로 건강한
-        음식을 만듭니다.
-      </p>
-      <a href="menu" class="button">메뉴보기</a>
-    </div>
-  </body>
+  <div id="home" class="big-bg"> 
+      <body>
+        <header class="page-header wrapper">
+          <h1>
+            <a href="index.html"
+              ><img src="../assets/images/logo.svg" alt="WCB 카페 홈" class="logo"
+            /></a>
+          </h1>
+    
+          <nav>
+            <ul class="main-nav">
+              <li><a href="news.html">News</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            .
+          </nav>
+        </header>
+    
+        <div class="home-content wrapper">
+          <h2 class="page-title">We'll Make Your Day</h2>
+          <p>
+            멋진 카페에서 힐링시간을 가지세요. 첨가물을 넣지 않은 재료로 건강한
+            음식을 만듭니다.
+          </p>
+          <a href="menu" class="button">메뉴보기</a>
+        </div>
+      </body>
+  </div>
 </html>
