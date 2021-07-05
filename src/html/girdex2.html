@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .grid-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        gap: 0.5rem;
+      }
+      @media (max-width: 768px) {
+        aside {
+          grid-row: 4 / 5;
+          grid-column: 1 / 3;
+        }
+        section {
+          grid-column: 1 / 3;
+        }
+      }
+      .body {
+        margin: 0px;
+      }
+      header {
+        background-color: lightcoral;
+        border: 1px solid #333;
+        padding: 1em;
+        grid-column: 1/3;
+      }
+      nav {
+        background-color: lightgreen;
+        border: 1px solid #333;
+        padding: 1em;
+        grid-column: 1 / 3;
+      }
+      section {
+        background-color: lightseagreen;
+        border: 1px solid #333;
+        padding: 1em;
+      }
+      aside {
+        background-color: lightblue;
+        border: 1px solid #333;
+        padding: 1em;
+      }
+      footer {
+        background-color: lightsalmon;
+        border: 1px solid #333;
+        padding: 1em;
+        grid-column: 1/3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="gird-container">
+      <header>head</header>
+      <nav>Navigation</nav>
+      <section>
+        Excepteur enim officia duis officia magna commodo esse eiusmod nisi sunt
+        excepteur dolore incididunt enim. Proident commodo laboris culpa ad
+        cillum eiusmod anim. Est esse adipisicing aute mollit aute aliqua
+        excepteur do aliqua voluptate irure est dolor anim. Eiusmod elit ex eu
+        irure consequat nulla proident veniam. Do in consequat excepteur Lorem.
+        Ipsum id nulla qui et.
+      </section>
+      <aside id="sidebar">sidebar</aside>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

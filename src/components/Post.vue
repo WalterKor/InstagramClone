@@ -1,32 +1,37 @@
 <template>
   <div class="post">
     <div class="post-header">
-      <div class="profile" :style="{backgroundImage : `url(${feedData.userImage})`}"></div>
-      <span class="profile-name">{{feedData.name}}</span>
+      <div
+        class="profile"
+        :style="{ backgroundImage: `url(${feedData.userImage})` }"
+      ></div>
+      <span class="profile-name">{{ feedData.name }}</span>
     </div>
-    <div class="post-body" :style="{ backgroundImage : `url(${feedData.postImage})`}"></div>
+    <div
+      class="post-body"
+      :style="{ backgroundImage: `url(${feedData.postImage})` }"
+    ></div>
     <div class="post-content">
-      <p>{{feedData.likes}}</p>
-      <p><strong>{{feedData.name}}</strong>{{feedData.content}}</p>
-      <p class="date">{{feedData.date}}</p>
+      <p>{{ feedData.likes }}</p>
+      <p>
+        <strong>{{ feedData.name }}</strong
+        >{{ feedData.content }}
+      </p>
+      <p class="date">{{ feedData.date }}</p>
     </div>
-</div> 
+  </div>
 </template>
 
 <script>
-
 export default {
- 
-props : {
-  feedData : Object,
-}
-
-
-}
+  props: {
+    feedData: Object,
+  },
+};
 </script>
 
 <style>
-    .post {
+.post {
   width: 100%;
 }
 .profile {
@@ -63,5 +68,5 @@ props : {
   font-size: 11px;
   color: grey;
   margin-top: -8px;
-} 
+}
 </style>
