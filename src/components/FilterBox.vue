@@ -4,7 +4,7 @@
     class="filter-item"
     :style="`background-image:url(${imageURL})`"
   >
-   필터명
+    <slot></slot>
   </div>
 </template>
 

@@ -20,7 +20,9 @@
         :key="a"
         :imageURL="imageURL"
         :filters="a"
-      ></FilterBox>
+      >
+        {{ a }}
+      </FilterBox>
     </div>
   </div>
 
