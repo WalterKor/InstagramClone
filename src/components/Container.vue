@@ -15,7 +15,9 @@
       :style="`background-image:url(${imageURL})`"
     ></div>
     <div class="filters">
-      <FilterBox></FilterBox>
+      <div v-for="(a, i) in filters" :key="a">
+        <FilterBox class="a.[i]" :imageURL="imageURL"></FilterBox>
+      </div>
     </div>
   </div>
 
@@ -39,13 +41,43 @@ import FilterBox from "./FilterBox.vue";
 
 export default {
   data() {
-    return {};
+    return {
+      filters: [
+        "aden",
+        "_1977",
+        "brannan",
+        "brooklyn",
+        "clarendon",
+        "earlybird",
+        "gingham",
+        "hudson",
+        "inkwell",
+        "kelvin",
+        "lark",
+        "lofi",
+        "maven",
+        "mayfair",
+        "moon",
+        "nashville",
+        "perpetua",
+        "reyes",
+        "rise",
+        "slumber",
+        "stinson",
+        "toaster",
+        "valencia",
+        "walden",
+        "willow",
+        "xpro2",
+      ],
+    };
   },
 
   components: {
     Post: Post,
     FilterBox: FilterBox,
   },
+
   props: {
     //feedData : Array 이름 : 종류
     feedData: Array,
