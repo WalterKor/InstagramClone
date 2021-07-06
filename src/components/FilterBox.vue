@@ -1,7 +1,7 @@
 <template>
   <div :class="filters" class="filter-item" :style="`background-image:url(${imageURL})`">
-    <slot name="a"></slot>
-    <slot name="b"></slot>
+    <slot></slot>
+    <button @click="fire">버튼</button>
   </div>
 </template>
 
@@ -12,6 +12,12 @@ export default {
     imageURL: String,
     filters: Array,
   },
+
+  methods : {
+    fire(){
+      this.emitter.emit('작명', '데이터')
+    }
+  }
 };
 </script>
 
