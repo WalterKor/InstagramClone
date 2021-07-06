@@ -73,14 +73,14 @@ export default {
       var 내게시물 = {
         name: "Kim Hyun",
         userImage: "https://placeimg.com/100/100/arch",
-        postImage: `${this.imageURL}`,
+        postImage: this.imageURL,
         likes: 36,
         date: "May 15",
         liked: false,
         content: this.contentText,
         filter: "perpetua",
       };
-      this.게시물.unshift(내게시물);
+      this.feedData.unshift(내게시물);
       this.step = 0;
     },
 

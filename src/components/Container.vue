@@ -15,11 +15,7 @@
       :style="`background-image:url(${imageURL})`"
     ></div>
     <div class="filters">
-      <div class="filter-1"></div>
-      <div class="filter-1"></div>
-      <div class="filter-1"></div>
-      <div class="filter-1"></div>
-      <div class="filter-1"></div>
+      <FilterBox></FilterBox>
     </div>
   </div>
 
@@ -30,7 +26,7 @@
       :style="`background-image:url(${imageURL})`"
     ></div>
     <div class="write">
-      <textarea @input="$emit('wirte, $event.target.value')" class="write-box">
+      <textarea @input="$emit('wirte', $event.target.value)" class="write-box">
 write!</textarea
       >
     </div>
@@ -39,6 +35,7 @@ write!</textarea
 
 <script>
 import Post from "./Post.vue";
+import FilterBox from "./FilterBox.vue";
 
 export default {
   data() {
@@ -47,6 +44,7 @@ export default {
 
   components: {
     Post: Post,
+    FilterBox: FilterBox,
   },
   props: {
     //feedData : Array 이름 : 종류
