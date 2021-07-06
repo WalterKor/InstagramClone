@@ -3,7 +3,9 @@
     :class="filters"
     class="filter-item"
     :style="`background-image:url(${imageURL})`"
-  ></div>
+  >
+   필터명
+  </div>
 </template>
 
 <script>
