@@ -15,9 +15,12 @@
       :style="`background-image:url(${imageURL})`"
     ></div>
     <div class="filters">
-      <div v-for="(a, i) in filters" :key="a">
-        <FilterBox class="a.[i]" :imageURL="imageURL"></FilterBox>
-      </div>
+      <FilterBox
+        v-for="a in filters"
+        :key="a"
+        :imageURL="imageURL"
+        :filters="a"
+      ></FilterBox>
     </div>
   </div>
 
