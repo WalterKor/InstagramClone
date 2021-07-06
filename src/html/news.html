@@ -1,24 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="news" class="big-bg"></div>
-    <div class="news-contents wrapper">
-        <article>
-            <header class="post-info">
-                <h2 class="post-title"></h2>
-                <p class="post-date"></p>
-                <p class="post-cat"></p>
-            </header>
-        </article>
-        <aside>사이드바부분</aside>
-    </div>
-    <footer></footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
 
-</body>
+    <title>WCB Cafe - NEWS</title>
+    <!-- ress.css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <style>
+      #home{
+        background-image: url(../assets/images/main-bg.jpg);
+        min-height: 100vh; /*화면을 꽉채운다 위에*/
+      }
+      .big-bg{
+        background-size: cover; /*다 나오게하는거?*/
+        background-position: center top;
+        background-repeat: no-repeat; /*화면이 너무 커져서 반복되는걸 방지*/
+      }
+      .wrapper{
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 0 4%;
+      }
+      h2{
+        font-family: 'Philosopher', sans-serif;
+      }
+      a{ text-decoration: none; }
+      img{ max-width: 100%;}
+      *{
+        margin: 0;
+      }
+      /*중앙정렬 치트키*/
+      /* body{ width: 1100px; margin: 0 auto;} */
+      .home-content {
+        text-align: center;
+        margin-top: 10%;
+      }
+      .home-content p {
+        font-size: 1.123rem;
+        margin: 10px 0 42px; /*위 | 왼쪽 오른쪽 | 아래 */
+      }
+      .page-title{
+        font-size: 5rem; /*폰트사이즈*/
+        text-transform: uppercase; /*대문자로 변경*/
+        font-weight: normal;
+      }
+      .button{
+        font-size: 1.375rem;
+        background: #0bd;
+        color: #fff;
+        border-radius: 5px;
+        padding: 18px 32px;   
+      }
+      .button:hover{
+        background: #0090aa;
+      }
+      .logo{
+        width: 210px;
+        margin-top: 14px;
+      }
+      .page-header{
+        display: flex;
+        justify-content: space-between;
+      }
+      .main-nav{
+        display: flex;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        margin-top: 34px;
+        list-style: none;
+      }
+      .main-nav li{
+        margin-left: 36px;
+      }
+      .main-nav a{
+        color: #432;
+      }
+      .main-nav a:hover{
+          color: #0bc;
+      }
+
+
+      #news{
+        background-image: url(../assets/images/news-bg.jpg);
+        height: 270px;
+        margin-bottom: 40px;
+
+      }
+      #news .page-title{
+        text-align: center;
+      }
+      h2{
+        line-height: 1.7;
+      }
+      footer{
+        background : #432;
+        text-align: center;
+        padding: 26px 0;
+        color: #fff;
+        font-size: 0.875rem;
+      }
+      .news-contents{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
+      article{
+        width: 74%;
+        background-color: lightcoral;
+      }
+      aside{
+        width: 22%;
+        background-color: lightcyan;
+      }
+
+
+    </style>
+    
+    
+  </head>
+  <div id="news" class="big-bg"> 
+      <body>
+        <header class="page-header wrapper">
+          <h1>
+            <a href="index.html"
+              ><img src="../assets/images/logo.svg" alt="WCB 카페 홈" class="logo"
+            /></a>
+          </h1>
+    
+          <nav>
+            <ul class="main-nav">
+              <li><a href="news.html">News</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="wrapper">
+          <h2 class="page-title">News</h2>
+        </div>
+    
+        
+      </body>
+  </div>
+
+  <div class="news-contents wrapper">
+    <article>메인콘텐츠</article>
+    <aside>사이드바 부분</aside>
+  </div>
+
+  <footer>
+    <div class="wrapper">
+      <p><small>&copy; 2019 WCB_Cafe</small></p>
+    </div>
+  </footer>
 </html>
+
