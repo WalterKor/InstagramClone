@@ -1,22 +1,21 @@
 <template>
+  <!-- 포스트 게시물 -->
   <div class="post">
     <div class="post-header">
-      <div
-        class="profile"
-        :style="{ backgroundImage: `url(${feedData.userImage})` }"
-      ></div>
-      <span class="profile-name">{{ feedData.name }}</span>
+      <div class="profile" :style="{ backgroundImage: `url(${feedData.userImage})` }"></div>
+      <span class="profile-name">
+        {{ feedData.name }}
+        <!-- <slot></slot> -->
+        </span>
     </div>
-    <div
-      class="post-body"
-      :style="{ backgroundImage: `url(${feedData.postImage})` }"
-    ></div>
+    <div class="post-body" :style="{ backgroundImage: `url(${feedData.postImage})` }"></div>
     <div class="post-content">
+      <!-- 좋아요갯수 -->
       <p>{{ feedData.likes }}</p>
       <p>
-        <strong>{{ feedData.name }}</strong
-        >{{ feedData.content }}
+        <strong>{{ feedData.name }}</strong>{{ feedData.content }}
       </p>
+      <!-- 날짜 -->
       <p class="date">{{ feedData.date }}</p>
     </div>
   </div>

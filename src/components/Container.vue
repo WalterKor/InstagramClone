@@ -15,13 +15,8 @@
       :style="`background-image:url(${imageURL})`"
     ></div>
     <div class="filters">
-      <FilterBox
-        v-for="a in filters"
-        :key="a"
-        :imageURL="imageURL"
-        :filters="a"
-      >
-        {{ a }}
+      <FilterBox v-for="a in filters" :key="a" :imageURL="imageURL" :filters="a">
+        데이터
       </FilterBox>
     </div>
   </div>

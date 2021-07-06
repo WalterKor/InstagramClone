@@ -1,10 +1,7 @@
 <template>
-  <div
-    :class="filters"
-    class="filter-item"
-    :style="`background-image:url(${imageURL})`"
-  >
-    <slot></slot>
+  <div :class="filters" class="filter-item" :style="`background-image:url(${imageURL})`">
+    <slot name="a"></slot>
+    <slot name="b"></slot>
   </div>
 </template>
 
