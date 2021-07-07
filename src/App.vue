@@ -60,10 +60,27 @@ export default {
   components: {
     Container
   },
+
+  mounted(){
+    this.emitter.on('작명', (a)=>{
+      console.log(a)
+    })
+  },
   methods : {
-
+    
+    publish(){
+      var myfeed = {
+        name: "Kim Hyun",
+        userImage: "https://placeimg.com/100/100/arch",
+        postImage: this.postImage,
+        likes: 36,
+        date: "May 15",
+        liked: false,
+        content: this.feedData,
+        filter: "perpetua"
+      }
+    },
     more(){
-
       // axios.post('https://codingapple1.github.io/vue/more0.json')
       // .then()
       // .catch((err)=>{
