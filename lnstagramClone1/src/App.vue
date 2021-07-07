@@ -70,7 +70,6 @@ export default {
     
     publish(){
       var myfeed = {
-
         name: "Kim Hyun",
         userImage: "https://placeimg.com/100/100/arch",
         postImage: this.postImage,
@@ -79,11 +78,9 @@ export default {
         liked: false,
         content: this.feedData,
         filter: "perpetua"
-
       }
     },
     more(){
-      
       // axios.post('https://codingapple1.github.io/vue/more0.json')
       // .then()
       // .catch((err)=>{

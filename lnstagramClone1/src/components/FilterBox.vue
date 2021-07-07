@@ -23,7 +23,6 @@ export default {
 
 <style>
 .filter-item {
-  
   width: 100px;
   height: 100px;
   margin: 10px 10px 10px auto;
@@ -32,6 +31,5 @@ export default {
   color: white;
   background-size: cover;
   background-position: center;
-
 }
 </style>
