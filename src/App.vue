@@ -13,6 +13,7 @@
     </div>
 
     <Container :feedData="feedData" />
+
     <div class="moreFeed">
       <button @click="more">더보기</button>
     </div>
